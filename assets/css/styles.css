@@ -41,24 +41,52 @@ body.projects {
 }
 
 a {
+    color: #069af3;
     padding: 45px;
-    text-shadow: 1px 1px 4px black, 0 0 25px black, 0 0 5px #76D7EA;
-    transition: transform 1s;
+    text-shadow: 1px 1px 4px black, 0 0 25px black, 0 0 5px #069af3;
 }
 
-.about,
-.contact,
-.projects,
-.homePage {
-    color: #76D7EA;
+@-webkit-keyframes hvr-pulse {
+    25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
 }
 
-a:hover {
-    transform: rotate(360deg)
+@keyframes hvr-pulse {
+    25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
 }
 
-a.active {
-    color: #007bff;
+.hvr-pulse {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-pulse:hover,
+.hvr-pulse:focus,
+.hvr-pulse:active {
+    -webkit-animation-name: hvr-pulse;
+    animation-name: hvr-pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 
@@ -67,7 +95,7 @@ a.active {
 #main-page {
     text-align: center;
     text-shadow: 2px 2px 2px #000000;
-    color: #FEFEFA;
+    color: #e3e3dc;
     padding-top: 200px;
 }
 
@@ -102,7 +130,6 @@ label {
     font-family: 'Rubik Mono One', sans-serif;
     font-size: .8em;
     letter-spacing: 1px;
-    color: #FEFEFA;
     transition: ease .3s;
 }
 
@@ -127,7 +154,7 @@ label {
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    background: #76D7EA;
+    background: #4caf50;
     transition: ease .6s;
 }
 
