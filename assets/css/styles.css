@@ -1,31 +1,25 @@
 /*******Background images*******/
 
 body.home {
-    background-image: url("../images/bg-signup.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: url("../images/minimal-mountains-tops-3840x2400-wallpaper-18475.jpg");
 }
 
 body.about {
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/la.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 body.contact {
     background-image: url("../images/contact.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 body.projects {
     background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, 1)), url('../images/projects.jpg');
+}
+
+body.home,
+.contact,
+.about,
+.projects {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -135,7 +129,11 @@ nav a:focus {
     text-align: center;
     text-shadow: 2px 2px 2px #000000;
     color: #e3e3dc;
-    padding-top: 200px;
+    padding-top: 320px;
+}
+
+.main-content {
+    margin-top: 50px;
 }
 
 h3,
