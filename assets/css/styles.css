@@ -33,61 +33,100 @@ body.projects {
 }
 
 
-/******NAVBAR******/
+/****************NAVcl-effect****************/
 
-#icon-bar {
+.navContainer {
     text-align: center;
-    margin: 0 auto;
 }
 
-a {
-    color: #069af3;
-    padding: 45px;
-    text-shadow: 1px 1px 4px black, 0 0 25px black, 0 0 5px #069af3;
-}
-
-@-webkit-keyframes hvr-pulse {
-    25% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-    75% {
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
-    }
-}
-
-@keyframes hvr-pulse {
-    25% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-    75% {
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
-    }
-}
-
-.hvr-pulse {
+nav a {
+    position: relative;
     display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    margin: 15px 25px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 2px 2px 2px #000000;
+    font-size: 1.35em;
 }
 
-.hvr-pulse:hover,
-.hvr-pulse:focus,
-.hvr-pulse:active {
-    -webkit-animation-name: hvr-pulse;
-    animation-name: hvr-pulse;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
+nav a:hover,
+nav a:focus {
+    outline: none;
+    text-decoration: none;
+    font-family: 'Rubik Mono One', sans-serif;
 }
+
+.cl-effect a {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.cl-effect a::before,
+.cl-effect a::after {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: #fff;
+    content: '';
+    opacity: 0.2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.cl-effect a::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.cl-effect a::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.cl-effect a:hover::before,
+.cl-effect a:hover::after,
+.cl-effect a:focus::before,
+.cl-effect a:focus::after {
+    opacity: 1;
+}
+
+.cl-effect a:hover::before,
+.cl-effect a:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.cl-effect a:hover::after,
+.cl-effect a:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+}
+
+
+/***********************************-*/
 
 
 /******MAIN_CONTENT*****/
